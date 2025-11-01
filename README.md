@@ -1,116 +1,240 @@
-# FAQ Accordion
+# FAQ Accordion Component
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-[![Frontend Mentor](https://img.shields.io/badge/Frontend%20Mentor-3e54a3?style=for-the-badge&logo=frontendmentor&logoColor=white)](https://www.frontendmentor.io/)
-[![Visual Studio Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
-[![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
-[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://www.netlify.com/)
-[![PerfectPixel](https://img.shields.io/badge/PerfectPixel-F56C94?style=for-the-badge)](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonecod/dkaagdgjmgdmbnecmcefdhjekcoceebi)
-![Image → Code](https://img.shields.io/badge/Image%20→%20Code-✔️-6a1b9a?style=for-the-badge&labelColor=2e003e&logoColor=white)
-![Semantic HTML](https://img.shields.io/badge/Semantic%20HTML-ff9800?style=for-the-badge)
-![Accessible](https://img.shields.io/badge/Accessibility-A11Y-0052cc?style=for-the-badge)
-![Responsive Layout](https://img.shields.io/badge/Responsive%20Layout-Full%20Support-blue?style=for-the-badge)
-![Mobile First](https://img.shields.io/badge/Mobile--First-Design-orange?style=for-the-badge)
-![Dark Mode](https://img.shields.io/badge/Dark--Mode-Available-111?style=for-the-badge&logo=halfbrickstudios&logoColor=white)
-![Dynamic Content](https://img.shields.io/badge/Dynamic%20Content-Available-673ab7?style=for-the-badge)
-[![Google Lighthouse](https://img.shields.io/badge/Lighthouse-Audit-00B0FF?style=for-the-badge&logo=lighthouse&logoColor=white)](./assets/downloads/lighthouse-performance-report.pdf)
+## 📋 Overview
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/26170183-54f1-462d-867e-5d5c50b1f17c/deploy-status)](https://faq-accordion-fm-jiro.netlify.app/)
-![Status](https://img.shields.io/badge/status-complete-brightgreen)
-![Learning Path](https://img.shields.io/badge/learning%20path-month%205-blue)
-![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.frontend-mentor-faq-accordion&left_text=repo%20views)
+A fully functional, accessible FAQ accordion component built as a Frontend Mentor challenge. This project demonstrates modern web development practices with semantic HTML, modular JavaScript using ES6 modules, and responsive CSS with smooth animations.
 
-## An Interactive FAQ Accordion for Frontend Mentor Website
+### Preview
 
-| _Mobile Preview (375x812)_                                   | _Desktop Preview (1440x960)_                                    |
-| ------------------------------------------------------------ | --------------------------------------------------------------- |
-| ![Mobile](./assets/img/site-preview-mobile_375x812.png)      | ![Desktop](./assets/img/site-preview-desktop_1440x960.png)      |
-| ![Mobile](./assets/img/site-preview-mobile-dark_375x812.png) | ![Desktop](./assets/img/site-preview-desktop-dark_1440x960.png) |
-
-An interactive FAQ accordion component that allows users to expand and collapse questions to view answers. Built with accessibility in mind, responsive across all devices, and includes light/dark theme support.
-
-Created as part of the building challenges from **[Frontend Mentor](https://www.frontendmentor.io/)**.
+| Mobile View (375x812) | Desktop View (1440x960) |
+|----------------------|------------------------|
+| ![Mobile Light](./assets/img/site-preview-mobile_375x812.png) | ![Desktop Light](./assets/img/site-preview-desktop_1440x960.png) |
+| ![Mobile Dark](./assets/img/site-preview-mobile-dark_375x812.png) | ![Desktop Dark](./assets/img/site-preview-desktop-dark_1440x960.png) |
 
 ---
 
-## Overview
+## ✨ Features
 
-This project is a fully functional and visually polished FAQ accordion designed for the Frontend Mentor challenge.  
-It uses semantic HTML for structure, CSS for styling and animations, and JavaScript for interactivity.
+### Core Functionality
+- ✅ **Smooth Accordion Animation** - Expand/collapse with elegant transitions
+- ✅ **Dynamic Icon Management** - Plus/minus icons update based on state
+- ✅ **First FAQ Auto-Opens** - Enhanced user experience with default state
+- ✅ **Responsive Resize Handling** - Open accordions adjust dynamically on window resize
+- ✅ **Click on Question** - Both question text and button toggle the accordion
 
-The project is mobile-first, supports dark mode, and ensures accessibility with proper ARIA attributes.  
-Google Lighthouse was used to confirm optimal performance, accessibility, and best practices.
+### Theme Support
+- ✅ **Light/Dark Mode Toggle** - Seamless theme switching
+- ✅ **Theme Persistence** - Saves preference to localStorage
+- ✅ **System Preference Detection** - Respects user's OS theme preference
+- ✅ **Dynamic Background Images** - Background patterns change with theme
 
----
+### Accessibility
+- ✅ **ARIA Attributes** - Complete aria-pressed and aria-label support
+- ✅ **Keyboard Navigation** - Full keyboard accessibility
+- ✅ **Screen Reader Friendly** - Proper semantic HTML structure
+- ✅ **Focus Indicators** - Clear focus states for all interactive elements
+- ✅ **Reduced Motion Support** - Respects user's motion preferences
 
-## Features
-
-- Fully responsive (mobile-first) design
-- Expand/collapse accordion with smooth transitions
-- Light and dark mode theme toggle
-- Accessible via ARIA attributes
-- Pixel-perfect layout using PerfectPixel
-- Reduced motion enabled
-- Google Lighthouse audited
-
----
-
-## What I Learned
-
-- I applied the `import` and `export` keywords for modular JavaScript approach
-- Learned the importance of modularizing code for better maintainability
-- Managing dynamic class toggling and state in JavaScript
-- Writing semantic HTML for interactive components
-- Improved accessibility skills with ARIA attributes
-- Managed to update the ARIA attributes based on current state
-- Refactored my old `theme.js` code and learned how to add more functionality
+### Technical Excellence
+- ✅ **Modular JavaScript** - ES6 modules for maintainable code
+- ✅ **Error Handling** - Defensive programming with null checks
+- ✅ **Performance Optimized** - Efficient event handling and DOM manipulation
+- ✅ **Pixel Perfect** - Matches design specifications precisely
+- ✅ **Cross-Browser Compatible** - Works on all modern browsers
 
 ---
 
-## Tech Used
+## 🚀 Getting Started
 
-- HTML5
-- CSS3
-- JavaScript
-- Git
-- GitHub
-- Netlify
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- No build tools required - runs directly in the browser
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/frontend-mentor-faq-accordion-main.git
+   ```
+
+2. **Navigate to the project directory**
+   ```bash
+   cd frontend-mentor-faq-accordion-main
+   ```
+
+3. **Open in your browser**
+   - Simply open `index.html` in your preferred browser
+   - Or use a local development server:
+     ```bash
+     # Using Python 3
+     python -m http.server 8000
+     
+     # Using Node.js (http-server)
+     npx http-server
+     
+     # Using PHP
+     php -S localhost:8000
+     ```
+
+4. **Access the application**
+   - Navigate to `http://localhost:8000` (or the port you specified)
 
 ---
 
-## Design Reference & Tools
+## 📁 Project Structure
 
-- JPG design image
-- PerfectPixel
+```
+frontend-mentor-faq-accordion-main/
+│
+├── assets/
+│   ├── docs/              # Design files and documentation
+│   ├── downloads/          # Performance reports
+│   ├── fonts/              # Custom font files (Work Sans)
+│   ├── icons/              # Favicons and SVG icons
+│   └── img/                # Background patterns and previews
+│
+├── css/
+│   └── style.css          # Main stylesheet with variables and themes
+│
+├── js/
+│   ├── index.js           # Entry point - initializes modules
+│   └── modules/
+│       ├── accordion.js   # Accordion functionality
+│       ├── theme.js       # Theme toggle and management
+│       └── ui.js          # UI utilities and icon management
+│
+├── index.html             # Main HTML file
+├── favicon.ico            # Site favicon
+├── LICENSE                # License file
+└── README.md              # This file
+```
 
 ---
 
-## How to Run
+## 🎨 Architecture
 
-1. Clone the repository
-2. Open `index.html` in your browser
+### JavaScript Modules
+
+#### `js/index.js`
+- Main entry point
+- Initializes theme toggle and accordion
+- Ensures proper initialization order
+
+#### `js/modules/accordion.js`
+- Handles accordion expand/collapse logic
+- Manages first FAQ default state
+- Implements resize event handling
+- Manages icon state initialization
+
+#### `js/modules/theme.js`
+- Theme toggle functionality
+- localStorage management
+- System preference detection
+- Background image switching
+- Icon theme class management
+
+#### `js/modules/ui.js`
+- Icon shape management (plus/minus)
+- Theme-aware icon styling
+- ARIA attribute updates
+- SVG path manipulation
+
+### CSS Architecture
+- CSS Custom Properties for theming
+- Mobile-first responsive design
+- Smooth transitions with reduced motion support
+- Dark mode with `.dark` class
 
 ---
 
-## Live Demo
+## 🎯 Usage
 
-Or you can check out the **[live website here](https://faq-accordion-fm-jiro.netlify.app/)**
+### Basic Accordion Interaction
+- **Click the question text** or **click the icon button** to toggle
+- **First FAQ opens automatically** on page load
+- **Icons update** based on open/closed state and theme
+
+### Theme Toggle
+- **Click the theme toggle button** in the top-right corner
+- Theme preference is **saved automatically**
+- Background images **update dynamically**
+
+### Keyboard Navigation
+- **Tab** to navigate between accordion items
+- **Enter** or **Space** to toggle accordion state
+- All interactive elements are keyboard accessible
 
 ---
 
-## Performance Report
+## 🛠️ Technologies Used
 
-A **Google Lighthouse** audit was conducted on the final version of this project. You can view the **[full report here](./assets/downloads/lighthouse-performance-report.pdf)**.
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling with custom properties
+- **JavaScript (ES6+)** - Modular, modern JavaScript
+- **Git** - Version control
+- **GitHub** - Repository hosting
 
 ---
 
-## Author
+## 📊 Performance
 
-Created by **Elmar Chavez**
+- ✅ Optimized SVG icon handling
+- ✅ Efficient event listeners with debouncing
+- ✅ Minimal DOM manipulations
+- ✅ CSS transitions for smooth animations
+- ✅ Lazy initialization where appropriate
 
-Month/Year: **August 2025**
+---
 
-Journey: **5<sup>th</sup>** month of learning _frontend web development_.
+## 🔧 Customization
+
+### Changing Colors
+Edit CSS custom properties in `css/style.css`:
+```css
+:root {
+  --BGCOLOR: hsl(275, 100%, 97%);
+  --FONT-COLOR-CARD-QUESTION-HOVER: #ad28eb;
+  /* ... more variables ... */
+}
+```
+
+### Adjusting Animation Speed
+Modify transition duration:
+```css
+.card__answer {
+  transition: max-height 0.3s ease-in-out; /* Change 0.3s to your preference */
+}
+```
+
+### Adding More FAQs
+Simply duplicate the `.card__faq` section in `index.html`:
+```html
+<section class="card__faq">
+  <header class="card__faq-header">
+    <p class="card__question">Your question here?</p>
+    <button class="card__button" type="button" aria-pressed="false">
+      <!-- SVG icon -->
+    </button>
+  </header>
+  <div class="card__answer">
+    <p class="card__p">Your answer here.</p>
+  </div>
+</section>
+```
+
+---
+
+## ♿ Accessibility Features
+
+- **ARIA Attributes**: `aria-pressed`, `aria-label`, `aria-hidden`
+- **Semantic HTML**: Proper use of `<section>`, `<header>`, `<button>`
+- **Keyboard Support**: Full keyboard navigation
+- **Focus Management**: Visible focus indicators
+- **Screen Reader Support**: Descriptive labels and states
+- **Reduced Motion**: Respects `prefers-reduced-motion` media query
+
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
