@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Accordion</title>
+    <meta name="author" content="Elmar Chavez" />
+    <meta
+      name="description"
+      content="An interactive and responsive FAQ accordion for Frontend Mentor built with HTML, CSS, and JavaScript. Created as part of a Frontend Mentor challenge during the author's fifth month learning frontend web development."
+    />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/icons/favicon-16x16.png"
+    />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+    <meta property="og:site_name" content="CodingWithJiro" />
+    <meta property="og:title" content="FAQ Accordion" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Interactive and responsive FAQ accordion built with HTML, CSS, and JavaScript. A Frontend Mentor challenge completed during the author's fifth month learning frontend development."
+    />
+    <meta
+      property="og:url"
+      content="https://faq-accordion-fm-jiro.netlify.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://faq-accordion-fm-jiro.netlify.app/assets/img/site-preview-meta_1200x630.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FAQ Accordion" />
+    <meta
+      name="twitter:description"
+      content="An interactive #FrontendMentor FAQ accordion built with #HTML, #CSS & #JS made during my fifth month learning #WebDev."
+    />
+    <meta
+      name="twitter:image"
+      content="https://faq-accordion-fm-jiro.netlify.app/assets/img/site-preview-meta_1200x630.png"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#f9f0ff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1a1a1a"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://faq-accordion-fm-jiro.netlify.app/" />
+    <link
+      rel="preload"
+      href="./assets/fonts/work-sans-v23-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/work-sans-v23-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/work-sans-v23-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a
+        class="header__skip sr-only"
+        href="#main"
+        aria-label="Skip to main content"
+      >
+        Go directly to the main content of the page.
+      </a>
+
+      <div class="theme">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="theme__icon theme__icon--light"
+          aria-hidden="true"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <g clip-path="url(#a)" fill="currentColor">
+              <path
+                d="M12 0a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1ZM4.929 3.515a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 0 0 1.414-1.414L4.93 3.515ZM1 11a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2H1ZM18 12a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1ZM17.657 16.243a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 1 0 1.414-1.414l-2.828-2.828ZM7.757 17.657a1 1 0 1 0-1.414-1.414L3.515 19.07a1 1 0 1 0 1.414 1.414l2.828-2.828ZM20.485 4.929a1 1 0 0 0-1.414-1.414l-2.828 2.828a1 1 0 1 0 1.414 1.414l2.828-2.828ZM13 19a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="#ffffff" d="M0 0h24v24H0z"></path>
+              </clipPath>
+            </defs>
+          </g>
+        </svg>
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="theme__icon theme__icon--dark hidden"
+          aria-hidden="true"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M9.272 2.406a1 1 0 0 0-1.23-1.355C6.59 1.535 5.432 2.487 4.37 3.55a11.399 11.399 0 0 0 0 16.182c4.518 4.519 11.51 4.261 15.976-.205 1.062-1.062 2.014-2.22 2.498-3.673A1 1 0 0 0 21.55 14.6c-3.59 1.322-7.675.734-10.434-2.025-2.765-2.766-3.328-6.83-1.844-10.168Z"
+              fill="currentColor"
+            ></path>
+          </g>
+        </svg>
+
+        <button
+          type="button"
+          aria-label="Toggle Light/Dark Mode"
+          aria-pressed="false"
+          class="theme__button"
+        ></button>
+      </div>
+    </header>
+
+    <main class="main" id="main">
+      <div class="main__container">
+        <article class="card" aria-labelledby="card-title">
+          <header class="card__header">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="41"
+              fill="none"
+              viewBox="0 0 40 41"
+              aria-hidden="true"
+              class="card__star"
+            >
+              <path
+                fill="currentColor"
+                d="M37.5 20.5a2.467 2.467 0 0 1-1.64 2.344l-9.913 3.604-3.603 9.911a2.5 2.5 0 0 1-4.688 0l-3.604-9.922-9.911-3.593a2.5 2.5 0 0 1 0-4.688l9.921-3.604 3.594-9.911a2.5 2.5 0 0 1 4.688 0l3.604 9.921 9.911 3.594A2.467 2.467 0 0 1 37.5 20.5Z"
+              />
+            </svg>
+
+            <h1 class="card__title" id="card-title">FAQs</h1>
+          </header>
+
+          <section class="card__faq">
+            <header class="card__faq-header">
+              <p class="card__question">
+                What is Frontend Mentor, and how will it help me?
+              </p>
+
+              <button
+                class="card__button card__button--default"
+                type="button"
+                aria-label="Click to know more details"
+                aria-pressed="false"
+                title="Show more"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="31"
+                  fill="none"
+                  viewBox="0 0 30 31"
+                  aria-hidden="true"
+                  class="card__button-icon"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+                  />
+                </svg>
+              </button>
+            </header>
+
+            <div class="card__answer">
+              <p class="card__p">
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It's suitable for all levels and
+                ideal for portfolio building.
+              </p>
+            </div>
+          </section>
+
+          <section class="card__faq">
+            <header class="card__faq-header">
+              <p class="card__question">Is Frontend Mentor free?</p>
+
+              <button
+                class="card__button"
+                type="button"
+                aria-label="Click to know more details"
+                aria-pressed="false"
+                title="Show more"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="31"
+                  fill="none"
+                  viewBox="0 0 30 31"
+                  aria-hidden="true"
+                  class="card__button-icon"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+                  />
+                </svg>
+              </button>
+            </header>
+
+            <div class="card__answer">
+              <p class="card__p">
+                Yes, Frontend Mentor offers both free and premium coding
+                challenges, with the free option providing access to a range of
+                projects suitable for all skill levels.
+              </p>
+            </div>
+          </section>
+
+          <section class="card__faq">
+            <header class="card__faq-header">
+              <p class="card__question">
+                Can I use Frontend Mentor projects in my portfolio?
+              </p>
+
+              <button
+                class="card__button"
+                type="button"
+                aria-label="Click to know more details"
+                aria-pressed="false"
+                title="Show more"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="31"
+                  fill="none"
+                  viewBox="0 0 30 31"
+                  aria-hidden="true"
+                  class="card__button-icon"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+                  />
+                </svg>
+              </button>
+            </header>
+
+            <div class="card__answer">
+              <p class="card__p">
+                Yes, you can use projects completed on Frontend Mentor in your
+                portfolio. It's an excellent way to showcase your skills to
+                potential employers!
+              </p>
+            </div>
+          </section>
+
+          <section class="card__faq">
+            <header class="card__faq-header">
+              <p class="card__question">
+                How can I get help if I'm stuck on a challenge?
+              </p>
+
+              <button
+                class="card__button"
+                type="button"
+                aria-label="Click to know more details"
+                aria-pressed="false"
+                title="Show more"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="31"
+                  fill="none"
+                  viewBox="0 0 30 31"
+                  aria-hidden="true"
+                  class="card__button-icon"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+                  />
+                </svg>
+              </button>
+            </header>
+
+            <div class="card__answer">
+              <p class="card__p">
+                The best place to get help is inside Frontend Mentor's Discord
+                community. There's a help channel where you can ask questions
+                and seek support from other community members.
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <picture class="main__picture">
+        <source
+          media="(min-width: 48rem)"
+          srcset="./assets/img/background-pattern-desktop_1440x320.svg"
+          type="image/svg+xml"
+        />
+
+        <img
+          src="./assets/img/background-pattern-mobile_375x232.svg"
+          alt=""
+          aria-hidden="true"
+          class="main__background"
+          type="svg+xml"
+        />
+      </picture>
+    </main>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
