@@ -416,7 +416,7 @@ body {
   }
 
   .card__answer {
-    transition: max-height 0.15s ease-in-out;
+    transition: max-height 0.3s ease-in-out;
   }
 
   /* ADD OTHER TRANSITIONS AND ANIMATIONS HERE */

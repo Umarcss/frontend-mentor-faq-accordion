@@ -1,3 +1,9 @@
+// * IMPORT MODULES
+import {
+  changeAccordionIconToMinus,
+  changeAccordionIconToPlus,
+} from "./ui.js";
+
 // * THEME-TOGGLE SCRIPT
 const iconLight = document.querySelector(".theme__icon--light");
 const iconDark = document.querySelector(".theme__icon--dark");
@@ -59,32 +65,18 @@ function updateAriaPressedToFalse() {
 }
 
 function resetAllClassesButtonIcon() {
+  // Update all button icons with correct shape and theme classes
   cardButtons.forEach((cardButton) => {
     const cardButtonIcon = cardButton.querySelector(".card__button-icon");
-    cardButtonIcon.classList.remove(
-      "plus-light",
-      "minus-light",
-      "plus-dark",
-      "minus-dark"
-    );
-
-    if (cardButton.getAttribute("aria-pressed") === "false" && isDarkTheme()) {
-      cardButtonIcon.classList.add("plus-dark");
-    } else if (
-      cardButton.getAttribute("aria-pressed") === "true" &&
-      isDarkTheme()
-    ) {
-      cardButtonIcon.classList.add("minus-dark");
-    } else if (
-      cardButton.getAttribute("aria-pressed") === "false" &&
-      !isDarkTheme()
-    ) {
-      cardButtonIcon.classList.add("plus-light");
-    } else if (
-      cardButton.getAttribute("aria-pressed") === "true" &&
-      !isDarkTheme()
-    ) {
-      cardButtonIcon.classList.add("minus-light");
+    if (!cardButtonIcon) return;
+    
+    const isPressed = cardButton.getAttribute("aria-pressed") === "true";
+    
+    // Update icon shape and class based on state and theme
+    if (isPressed) {
+      changeAccordionIconToMinus(cardButtonIcon);
+    } else {
+      changeAccordionIconToPlus(cardButtonIcon);
     }
   });
 }
@@ -111,6 +103,35 @@ function changeBackgroundImageToDark() {
   );
 }
 
+function initializeButtonIcons() {
+  // Initialize all button icons with proper theme classes
+  cardButtons.forEach((cardButton) => {
+    const cardButtonIcon = cardButton.querySelector(".card__button-icon");
+    if (cardButtonIcon) {
+      const isPressed = cardButton.getAttribute("aria-pressed") === "true";
+      
+      // Remove all theme classes first
+      cardButtonIcon.classList.remove(
+        "plus-light",
+        "minus-light",
+        "plus-dark",
+        "minus-dark"
+      );
+      
+      // Add appropriate class based on theme and state
+      if (isPressed) {
+        cardButtonIcon.classList.add(
+          isDarkTheme() ? "minus-dark" : "minus-light"
+        );
+      } else {
+        cardButtonIcon.classList.add(
+          isDarkTheme() ? "plus-dark" : "plus-light"
+        );
+      }
+    }
+  });
+}
+
 preLoadDarkTheme();
 function preLoadDarkTheme() {
   if (savedTheme() === "dark" || (savedTheme() === null && prefersDark())) {
@@ -121,6 +142,11 @@ function preLoadDarkTheme() {
     updateAriaPressedToTrue();
     changeBackgroundImageToDark();
   }
+  
+  // Initialize button icons after theme is set
+  setTimeout(() => {
+    initializeButtonIcons();
+  }, 0);
 }
 
 export function isDarkTheme() {
@@ -136,8 +162,7 @@ export function initThemeToggle() {
   function toggleTheme() {
     button.addEventListener("click", () => {
       toggleDarkTheme();
-      resetAllClassesButtonIcon();
-
+      
       if (isDarkTheme()) {
         addActiveTheme();
         hideIconLight();
@@ -151,6 +176,9 @@ export function initThemeToggle() {
         updateAriaPressedToFalse();
         changeBackgroundImageToLight();
       }
+      
+      // Update all button icons to reflect theme change
+      resetAllClassesButtonIcon();
 
       savePreferredTheme();
     });
